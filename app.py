@@ -24,7 +24,7 @@ def details():
     try:
         address = IPAddress(address)
     except Exception as e:
-        results['error'] = e.message
+        results['error'] = str(e)
         return Response(json.dumps(results), mimetype='application/json')
 
     address_details = location.get_all(address)
