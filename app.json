@@ -8,6 +8,5 @@
   ],
   "repository": "https://github.com/huli/flask-on-heroku",
   "addons": [
-    "heroku-postgresql"
   ]
 }
