@@ -1,8 +1,9 @@
 import os
 import json
 import IP2Location
-import Werkzeug
 
+
+from werkzeug import *
 from flask import *
 from json import load
 from urllib.request import urlopen
