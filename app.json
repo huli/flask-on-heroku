@@ -1,0 +1,13 @@
+{
+  "name": "Testing Flask on Heroku",
+  "description": "Some simple tests for using flask on heroku",
+  "keywords": [
+    "flask",
+    "python",
+    "sample"
+  ],
+  "repository": "https://github.com/huli/flask-on-heroku",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
