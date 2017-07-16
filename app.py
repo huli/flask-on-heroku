@@ -25,7 +25,7 @@ def test_ip():
 def details():
     results = {}
 
-    address = request.headers.getlist("X-Forwarded-For").split(",")[0]
+    address = request.headers.getlist("X-Forwarded-For")[0]
     
     try:
         IP2LocObj = IP2Location.IP2Location()
