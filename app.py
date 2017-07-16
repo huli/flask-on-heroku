@@ -22,17 +22,16 @@ def details():
     address = load(urlopen('http://httpbin.org/ip'))['origin']
     
     try:
-        address = IPAddress(address)
+        IP2LocObj = IP2Location.IP2Location()
+        IP2LocObj.open("data/IP2LOCATION-LITE-DB1.BIN")
+        address_details = IP2LocObj.get_all(address)
     except Exception as e:
         results['error'] = str(e)
         return Response(json.dumps(results), mimetype='application/json')
 
-    address_details = location.get_all(address)
-    results['ipAddress'] = address
+    results['ipAddress'] = address_details.ip
     results['countryCode'] = address_details.country_short
     results['countryName'] = address_details.country_long
-    results['cityName'] = address_details.city
-    results['regionName'] = address_details.region
 
     return Response(json.dumps(results), mimetype='application/json')
 
