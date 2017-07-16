@@ -23,8 +23,8 @@ def details():
     
     try:
         address = IPAddress(address)
-    except Exception, e:
-        results['error'] = e.message
+    except Exception:
+        results['error'] = 'something went wrong'
         return Response(json.dumps(results), mimetype='application/json')
 
     address_details = location.get_all(address)
