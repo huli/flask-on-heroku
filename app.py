@@ -25,7 +25,7 @@ def test_ip():
 def details():
     results = {}
 
-    address = load(urlopen('http://httpbin.org/ip'))['origin']
+    address = request.headers.getlist("X-Forwarded-For").split(",")[0]
     
     try:
         IP2LocObj = IP2Location.IP2Location()
