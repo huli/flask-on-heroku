@@ -4,7 +4,7 @@ import IP2Location
 
 from flask import *
 from json import load
-from urllib2 import urlopen
+from urllib.request import urlopen
 
 
 app = Flask(__name__)
