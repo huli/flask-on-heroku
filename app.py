@@ -1,6 +1,7 @@
 import os
 import json
 import IP2Location
+import Werkzeug
 
 from flask import *
 from json import load
@@ -16,7 +17,7 @@ def sayHello(nameparameter=None):
 
 @app.route('/test')
 def test_ip():
-      address = load(urlopen('http://httpbin.org/ip'))
+      provided_ips = request.headers.getlist("X-Forwarded-For")
       return Response(json.dumps(address), mimetype='application/json')
 
 @app.route('/details')
