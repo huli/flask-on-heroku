@@ -19,7 +19,7 @@ def sayHello(nameparameter=None):
 @app.route('/test')
 def test_ip():
       provided_ips = request.headers.getlist("X-Forwarded-For")
-      return Response(json.dumps(address), mimetype='application/json')
+      return Response(json.dumps(provided_ips), mimetype='application/json')
 
 @app.route('/details')
 def details():
