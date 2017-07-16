@@ -14,6 +14,10 @@ app = Flask(__name__)
 def sayHello(nameparameter=None):
     return render_template('index.html', name=nameparameter)
 
+@app.route('/test')
+def test_ip():
+      address = load(urlopen('http://httpbin.org/ip'))
+      return Response(json.dumps(address), mimetype='application/json')
 
 @app.route('/details')
 def details():
