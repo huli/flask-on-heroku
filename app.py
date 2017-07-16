@@ -30,8 +30,8 @@ def details():
         return Response(json.dumps(results), mimetype='application/json')
 
     results['ipAddress'] = address_details.ip
-    results['countryCode'] = address_details.country_short
-    results['countryName'] = address_details.country_long
+    results['countryCode'] = address_details.country_short.decode()
+    results['countryName'] = address_details.country_long.decode()
 
     return Response(json.dumps(results), mimetype='application/json')
 
