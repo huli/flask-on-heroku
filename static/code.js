@@ -2,7 +2,7 @@ var country_name;
 
 function showAlert()
 {
-    alert(countryName);
+    alert(country_name);
 }
 
 function setCountry(countryName)
