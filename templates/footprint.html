@@ -9,6 +9,9 @@
 
 </script>
 <script type="text/javascript">
-    setCountry("foo");
+    setCountry(name);
+</script>
+<script type="text/javascript">
+    d3.json("{{ url_for('static', filename='test.json') }}", loadJson);
 </script>
 </html>

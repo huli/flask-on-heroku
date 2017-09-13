@@ -9,3 +9,8 @@ function setCountry(countryName)
 {
     country_name = countryName;
 }
+
+function loadJson(data)
+{
+    console.log(data);
+}
