@@ -35,7 +35,7 @@ def details():
         results['error'] = str(e)
         return Response(json.dumps(results), mimetype='application/json')
 
-    results['ipAddress'] = address
+    results['ipAddress'] = address_details.ip
     results['countryCode'] = address_details.country_short.decode()
     results['countryName'] = address_details.country_long.decode()
 
