@@ -60,7 +60,7 @@ def footprint():
     results['countryCode'] = address_details.country_short.decode()
     results['countryName'] = address_details.country_long.decode()
 
-    return render_template('footprint.html', name=nameparameter)
+    return render_template('footprint.html', name=address_details.country_long.decode())
 
 
 if __name__ == '__main__':
