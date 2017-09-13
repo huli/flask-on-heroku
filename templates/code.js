@@ -1,7 +1,3 @@
-
-
-
-
 var country_name;
 
 function showAlert()
